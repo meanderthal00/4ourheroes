@@ -45,7 +45,7 @@ var userLong=0;
   });
 
     $('.parallax').parallax();
-  });
+  
 
 //get firebase crap all sorted out
 var config = {
