@@ -7,8 +7,11 @@
     <!-- google font link -->
     <!-- <link href="https://fonts.googleapis.com/css?family=###" rel="stylesheet"> -->
     <!-- bootstrap link -->
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
-    
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u"
+        crossorigin="anonymous">
+
+
     <!-- css link-->
     <link rel="stylesheet" href="assets/css/style.css">
     <!--materialize link-->
@@ -23,85 +26,88 @@
 
 
     </header>
+
+
     <body>
-  <!-- Profile Panel -->
-  <div class="col-lg-6">
-        <div class="panel panel-info">
+        <!-- Profile Panel -->
+        <div class="col-lg-6">
+            <div class="panel panel-info">
+                <div class="panel-heading">
+                    <h3 class="panel-title">Profile:</h3>
+                </div>
+                <div class="panel-body">
+
+                    <!-- New User-->
+                    <form role="form">
+                        <div class="form-group">
+                            <img src="assets/profileimage.jpg" id="profilephoto">
+                            <button class="btn btn-info" id="upload-btn" type="submit">Image Upload</button>
+                        </div>
+                        <div class="form-group">
+                            <label for="fninput">First Name:</label>
+                            <input class="form-control" id="fn-input" type="text">
+                        </div>
+                        <div class="form-group">
+                            <label for="lninput">Last Name:</label>
+                            <input class="form-control" id="ln-input" type="text">
+                        </div>
+                        <div class="form-group">
+                            <label for="branchinput">Military Branch:</label>
+                            <input class="form-control" id="branch-input" type="text">
+                        </div>
+                        <div class="form-group">
+                            <label for="rankinput">Rank:</label>
+                            <input class="form-control" id="rank-input" type="text">
+                        </div>
+                        <div class="form-group">
+                            <label for="rankinput">Zip Code:</label>
+                            <input class="form-control" id="zipcode-input" type="text">
+                        </div>
+                        <div class="form-group">
+                            <label for="rankinput">Hobbies:</label>
+                            <input class="form-control" id="hobbies-input" type="text">
+                        </div>
+                        <br>
+                        <div class="form-group">
+                            <form action="">
+                                <p>Are you currently seeking employment?</p>
+                                <input type="radio" name="gender" value="male">Yes
+                                <br>
+                                <input type="radio" name="gender" value="female">No
+                                <br>
+
+                            </form>
+                        </div>
+
+                        <button class="btn btn-info" id="update-btn" type="submit">Update</button>
+
+
+                    </form>
+                </div>
+            </div>
+        </div>
+
+
+
+        </div>
+
+        <div class="panel panel-danger">
             <div class="panel-heading">
-                <h3 class="panel-title">Profile:</h3>
+                <h3 class="panel-title">USER PROFILE</h3>
             </div>
             <div class="panel-body">
 
-                <!-- New User-->
-                <form role="form">
-                    <div class="form-group">
-                        <img src="assets/profileimage.jpg" id="profilephoto">
-                        <button class="btn btn-info" id="upload-btn" type="submit">Image Upload</button>
-                    </div>
-                    <div class="form-group">
-                        <label for="fninput">First Name:</label>
-                        <input class="form-control" id="fn-input" type="text">
-                    </div>
-                    <div class="form-group">
-                        <label for="lninput">Last Name:</label>
-                        <input class="form-control" id="ln-input" type="text">
-                    </div>
-                    <div class="form-group">
-                        <label for="branchinput">Military Branch:</label>
-                        <input class="form-control" id="branch-input" type="text">
-                    </div>
-                    <div class="form-group">
-                        <label for="rankinput">Rank:</label>
-                        <input class="form-control" id="rank-input" type="text">
-                    </div>
-                    <div class="form-group">
-                        <label for="rankinput">Zip Code:</label>
-                        <input class="form-control" id="zipcode-input" type="text">
-                    </div>
-                    <div class="form-group">
-                        <label for="rankinput">Hobbies:</label>
-                        <input class="form-control" id="hobbies-input" type="text">
-                    </div>
-                    <br>
-                    <div class="form-group">
-                        <form action="">
-                            <p>Are you currently seeking employment?</p>
-                            <input type="radio" name="gender" value="male">Yes
-                            <br>
-                            <input type="radio" name="gender" value="female">No
-                            <br>
+                <p>all the profile data from firebase goes here</p>
 
-                        </form>
-                    </div>
 
-                    <button class="btn btn-info" id="update-btn" type="submit">Update</button>
+
 
 
                 </form>
             </div>
         </div>
-    </div>
+        </div>
 
-
-
-</div>
-
-<div class="panel panel-danger">
-    <div class="panel-heading">
-        <h3 class="panel-title">USER PROFILE</h3>
-    </div>
-    <div class="panel-body">
-
-        <p>all the profile data from firebase goes here</p>
-
-
-
-
-
-        </form>
-    </div>
-</div>
-</div>
 
 
     </body>
