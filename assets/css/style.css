@@ -1,18 +1,17 @@
-.nav-wrapper{
-    background-image: -webkit-gradient(linear, left top, left bottom, from(darkgrey),black);
-    background-image: -webkit-linear-gradient(top, darkgrey,black);
+.nav-wrapper {
+    background-image: -webkit-gradient(linear, left top, left bottom, from(darkgrey), black);
+    background-image: -webkit-linear-gradient(top, darkgrey, black);
     background-image: -moz-linear-gradient(top, darkgrey, black);
     background-image: linear-gradient(to bottom, darkgrey, black);
-    
 }
 
-.nav-content{
-     background-image: -webkit-gradient(linear, left top, left bottom, from(black), to(darkgrey));
-    background-image: -webkit-linear-gradient(top, black,(darkgrey));
-    background-image: -moz-linear-gradient(top, black,(darkgrey));
-    background-image: linear-gradient(to bottom, black,(darkgrey));
-
+.nav-content {
+    background-image: -webkit-gradient(linear, left top, left bottom, from(black), to(darkgrey));
+    background-image: -webkit-linear-gradient(top, black, (darkgrey));
+    background-image: -moz-linear-gradient(top, black, (darkgrey));
+    background-image: linear-gradient(to bottom, black, (darkgrey));
 }
+
 .tab {
     color: black;
 }
