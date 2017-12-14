@@ -66,11 +66,9 @@ body {
 }
 .card-panel{
     background-image: linear-gradient(black, darkgrey,black);
-    margin: auto;
+    
 }
-.container {
-    display: flex;
-    align-items: center;
-    justify-content: center;
+#sectionWhite {
+    background:red;
 }
 
