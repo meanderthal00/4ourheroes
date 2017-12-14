@@ -43,6 +43,39 @@ var userLong=0;
       console.log(response);
     });
 
+    //ajax function for usajobs
+
+    //usajobs requires the use of a function 'require' but this is not in the usual jQuery library
+    //I found it in something called RequireJS for loading files and modules
+    //Am I on the right track? Do I need to add that as a link to my html?
+    var request = require('request');
+
+    request({
+      url:"https://data.usajobs.gov/api/search?JobCategoryCode=2210",
+      method: 'GET',
+      headers:{
+        Host:'data.usajobs.gov',
+        'User-Agent':'alexarobinson19@gmail.com',
+        'Authorization-Key':"hIa5Qx84CEfa6bI3BB2IVTBA30EYEYetV78R14xSuu4="
+
+        //parameters to search:
+        // Keyword:
+        //LocationName:
+        //DatePosted:30
+
+      }
+  }), function(error, response, body) {      
+    var data = JSON.parse(body);  
+}.done(function(response){
+      console.log(response);
+      console.log(response.SearchResult.SearchResultItems[0].MatchedObjectDescriptor.PositionTitle);
+      console.log(response.SearchResult.SearchResultItems[0].MatchedObjectDescriptor.PositionLocation[0].LocationName);
+      console.log(response.SearchResult.SearchResultItems[0].MatchedObjectDescriptor.PositionFormattedDescription[0].Content);
+      console.log(response.SearchResult.SearchResultItems[0].MatchedObjectDescriptor.PositionURI);
+      console.log(response.SearchResult.SearchResultItems[0].MatchedObjectDescriptor.PositionRemuneration[0].MinimumRange);
+  });
+  
+
   });
 
     $('.parallax').parallax();
