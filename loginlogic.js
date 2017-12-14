@@ -1,3 +1,8 @@
+$(document).ready(function(){
+    $('.modal').modal();
+});
+
+
 var config = {
     apiKey: "AIzaSyD9zUxSiYvAJ5aS_EhGLIx_MWILBbJy4TY",
     authDomain: "project-1-530e9.firebaseapp.com",
