@@ -1,5 +1,6 @@
 body {
     font-family: 'Alegreya', serif;
+    font-size: 24px;
 
 }
 .nav-wrapper {
@@ -42,9 +43,34 @@ body {
     background-image: url("../images/loginimg.jpg");
     background-size: 1920px;
 }
+#indexBody {
+    background-image: url("../images/indeximg.jpg");
+    background-size: 1920px;
+    
+}
 .btn{
     background-color: #283439;
 }
 #loginCard {
     margin-left: 510px;
+    background-image: linear-gradient(black, darkgrey,black);
 }
+.card-content{
+    background-image: linear-gradient(black, darkgrey);
+}
+.card-action {
+    background-image: linear-gradient(darkgrey,black);
+}
+.waves-effect {
+    background-image: linear-gradient(darkgrey,black);
+}
+.card-panel{
+    background-image: linear-gradient(black, darkgrey,black);
+    margin: auto;
+}
+.container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
