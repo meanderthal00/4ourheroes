@@ -1,8 +1,7 @@
 // This is for the Parallax effect
 
 $(document).ready(function(){
-
-    // $('.parallax').parallax();
+  
  
     // var userInput = //the actual interests of the user from the profile page. Used to search meetups
     // var userZip = //zipcode from profile page. used to search meetups
