@@ -107,4 +107,9 @@ console.log("tokenWebsite:", tokenWebsite);
 
 //   });
 
+
 //     $('.parallax').parallax();
+
+    $('.parallax').parallax();
+  
+
