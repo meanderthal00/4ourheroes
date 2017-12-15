@@ -91,7 +91,7 @@ var token="";
 
 //   });
 
-//     $('.parallax').parallax();
+    $('.parallax').parallax();
   
 
 // //get firebase crap all sorted out
