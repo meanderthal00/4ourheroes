@@ -1,8 +1,15 @@
 // This is for the Parallax effect
 
 $(document).ready(function(){
+
+  // signout function
+  $("#logOutBtn").on("click", function (event) {
+    firebase.auth().signOut().then(function () {
+        console.log("User has signed out");
+    }).catch(function (error) {
+        // An error happened.
+    });
   
- 
     // var userInput = //the actual interests of the user from the profile page. Used to search meetups
     // var userZip = //zipcode from profile page. used to search meetups
     //when user is created run this ajax request and store the latitude and longitude
