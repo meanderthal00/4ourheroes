@@ -51,10 +51,4 @@ $("#googleBtn").on("click", function (event) {
 
 });
 
-$("#logOutBtn").on("click", function (event) {
-    firebase.auth().signOut().then(function () {
-        console.log("User has signed out");
-    }).catch(function (error) {
-        // An error happened.
-    });
-});
+
