@@ -68,7 +68,13 @@ body {
     background-image: linear-gradient(black, darkgrey,black);
     
 }
-#sectionWhite {
+/* #sectionWhite {
     background:red;
+} */
+
+ .nav-wrapper {
+
+   height:100px !important;
 }
+
 
