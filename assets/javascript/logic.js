@@ -63,7 +63,7 @@ $(document).ready(function(){
             // text:"jogging",
             // lat:userLat,
             // lon:userLong,
-            access_token:`{${accessToken}}`,
+            access_token:accessToken,
             key: "5a1b20747e54172335c4d412b296823",
             sign:"true"
           }
