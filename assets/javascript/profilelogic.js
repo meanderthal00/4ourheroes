@@ -14,7 +14,7 @@ var user;
 
 
 //updating profile info to firebase
-$("#profileupdatebtn").on("click", function (event) {
+$("#update-btn").on("click", function (event) {
     event.preventDefault();
 
     console.log("Profile button was clicked");
