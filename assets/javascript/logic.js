@@ -59,9 +59,6 @@ $(document).ready(function(){
         $.ajax({
           url: "https://api.meetup.com/find/upcoming_events",
           method: 'GET',
-          header:{
-            "Access-Control-Allow-Origin": "https://meanderthal00.github.io/vetransConnect/landing.html"
-          },
           data:{
             // page: 5,
             // text:"jogging",
