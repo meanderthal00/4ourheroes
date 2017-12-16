@@ -16,65 +16,63 @@ $(document).ready(function(){
     // var userInput = //the actual interests of the user from the profile page. Used to search meetups
     // var userZip = //zipcode from profile page. used to search meetups
     //when user is created run this ajax request and store the latitude and longitude
-var userLat=0;
-var userLong=0;
-var tokenWebsite="https://meanderthal00.github.io/vetransConnect/#access_token=1a8388005442463b180690acb6656661&token_type=bearer&expires_in=3600";
-var token = "";
-// tokenWebsite = window.location.href;
-console.log("tokenWebsite:", tokenWebsite);
-
-    $.ajax({
-      url: "https://maps.googleapis.com/maps/api/geocode/json",
-      method: 'GET',
-      data:{
-        address:"32812",
-        key:"AIzaSyDbO-ivrJFAH2KzMeRPuVOemHCxDqL3guQ"
-      }
-    }).done(function(response){
+    var userLat=0;
+    var userLong=0;
+    var tokenWebsite="";
+    var token = "";
+    tokenWebsite = window.location.href;
+    console.log("tokenWebsite:", tokenWebsite);
     
-      console.log(response.results[0].geometry.location.lat);
-      console.log(response.results[0].geometry.location.lng)
-      userLat=response.results[0].geometry.location.lat;
-      userLong=response.results[0].geometry.location.lng;
-      
-    });
+        $.ajax({
+          url: "https://maps.googleapis.com/maps/api/geocode/json",
+          method: 'GET',
+          data:{
+            address:"32812",
+            key:"AIzaSyDbO-ivrJFAH2KzMeRPuVOemHCxDqL3guQ"
+          }
+        }).done(function(response){
+        
+          console.log(response.results[0].geometry.location.lat);
+          console.log(response.results[0].geometry.location.lng)
+          userLat=response.results[0].geometry.location.lat;
+          userLong=response.results[0].geometry.location.lng;
+          
+        });
+    
+        $("#meetBtn").on("click", function(){
+          console.log("button pressed");
+          window.location.replace("https://secure.meetup.com/oauth2/authorize?client_id=uslukvp5bbuco9nni5lgm900av&response_type=token&redirect_uri=https://meanderthal00.github.io/vetransConnect/landing.html");
+          
+        });
+    
+        if(token.length>0){
+          var token = new URL(tokenWebsite).hash.split('&').filter(function(el) { if(el.match('access_token') !== null) return true; });
+          console.log("token:", token);
+          var accessToken = token[0].split("=")[1];
+          console.log("accessToken:", accessToken);
+          
+        };
+    
+      // ajax function call for landing page ... meet-ups
+        $.ajax({
+          url: "https://api.meetup.com/find/upcoming_events",
+          method: 'GET',
+          data:{
+            // page: 5,
+            // text:"jogging",
+            // lat:userLat,
+            // lon:userLong,
+            access_token:`{${accessToken}}`,
+            key: "5a1b20747e54172335c4d412b296823",
+            sign:"true"
+          }
+        }).done(function(response){
+          console.log(response);
+        });
+      });
 
-    //change to button id
-    $("button").on("click", function(){
-      console.log("button pressed");
-      window.location.replace("https://secure.meetup.com/oauth2/authorize?client_id=uslukvp5bbuco9nni5lgm900av&response_type=token&redirect_uri=https://meanderthal00.github.io/vetransConnect/");
-      
-    });
-
-    // if(tokenWebsite.hash){
-      var token = new URL(tokenWebsite).hash.split('&').filter(function(el) { if(el.match('access_token') !== null) return true; });
-      console.log("token:", token);
-      var accessToken = token[0].split("=")[1];
-      console.log("accessToken:", accessToken);
-      // console.log("token type:", typeof(token));
-
-      // console.log("tokenWebsite.hash:", tokenWebsite.hash);
-      
-    // };
-
-  // ajax function call for landing page ... meet-ups
-    $.ajax({
-      url: "https://api.meetup.com/find/upcoming_events",
-      method: 'GET',
-      data:{
-        // page: 5,
-        // text:"jogging",
-        // lat:userLat,
-        // lon:userLong,
-        access_token:`{${accessToken}}`,
-        key: "5a1b20747e54172335c4d412b296823",
-        sign:"true"
-      }
-    }).done(function(response){
-      console.log(response);
-    });
-  });
-    //ajax function for usajobs
+        //ajax function for usajobs
+    
 
     //usajobs requires the use of a function 'require' but this is not in the usual jQuery library
     //I found it in something called RequireJS for loading files and modules
