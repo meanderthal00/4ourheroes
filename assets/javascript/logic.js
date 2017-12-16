@@ -88,16 +88,16 @@ $(document).ready(function(){
         //LocationName:
         //DatePosted:30
       }
-  }), function(error, response, body) {      
-    var data = JSON.parse(body);  
-}.done(function(response){
+  }).done(function(response){
       console.log(response);
       console.log(response.SearchResult.SearchResultItems[0].MatchedObjectDescriptor.PositionTitle);
       console.log(response.SearchResult.SearchResultItems[0].MatchedObjectDescriptor.PositionLocation[0].LocationName);
       console.log(response.SearchResult.SearchResultItems[0].MatchedObjectDescriptor.PositionFormattedDescription[0].Content);
       console.log(response.SearchResult.SearchResultItems[0].MatchedObjectDescriptor.PositionURI);
       console.log(response.SearchResult.SearchResultItems[0].MatchedObjectDescriptor.PositionRemuneration[0].MinimumRange);
-  });
+  }), function(error, response, body) {      
+    var data = JSON.parse(body);
+  };
   
 });
 
