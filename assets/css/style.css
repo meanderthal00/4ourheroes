@@ -52,6 +52,7 @@ body {
     background-color: #283439;
 }
 #loginCard {
+    margin-top: 300px;
     margin-left: 510px;
     background-image: linear-gradient(black, darkgrey,black);
 }
@@ -91,3 +92,34 @@ body {
     background-size:cover;
 } */
 
+#meetText{
+    color: white;
+    padding: 20px;
+    margin-top: 25px;
+    background-image: linear-gradient( darkgrey,black);
+    /* border-style: inset; */
+    /* border-width: 15px; */
+    
+    border-radius: 18px;
+}
+#jobText{
+    color: white;
+    padding: 20px;
+    margin-top: 25px;
+    background-image: linear-gradient( darkgrey,black);
+    /* border-style: inset; */
+    /* border-width: 15px; */
+    
+    border-radius: 18px;
+}
+.profileInputs{
+    color: white;
+    padding: 20px;
+    margin-top: 25px;
+    background-image: linear-gradient( darkgrey,black);
+    /* border-style: inset; */
+    /* border-width: 15px; */
+    
+    border-radius: 18px; 
+
+}
