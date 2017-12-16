@@ -30,20 +30,20 @@
 
     <nav class="nav-extended">
         <div class="nav-wrapper">
-                <a href="landing.html" class="brand-logo">
-                    <img src="assets/images/logo.png" width="150" height="150" </a>
-                    <ul id="nav-mobile" class="right hide-on-med-and-down">
-                        <li>
-                            <a href="landing.html">Home</a>
-                        </li>
-                        <li>
-                            <a href="profile.html">Profile</a>
-                        </li>
-                        <li>
-                            <a class="waves-effect waves-light btn">Sign out</a>
-                        </li>
-                    </ul>
-            </div>
+            <a href="landing.html" class="brand-logo">
+                <img src="assets/images/logo.png" width="150" height="150" </a>
+                <ul id="nav-mobile" class="right hide-on-med-and-down">
+                    <li>
+                        <a href="landing.html">Home</a>
+                    </li>
+                    <li>
+                        <a href="profile.html">Profile</a>
+                    </li>
+                    <li>
+                        <a class="waves-effect waves-light btn">Sign out</a>
+                    </li>
+                </ul>
+        </div>
 
 
 
@@ -53,7 +53,7 @@
 
 
 <body id="profileBody">
-        <!-- <div class="parallax-container">
+    <!-- <div class="parallax-container">
                 <div class="parallax"><img src="assets/images/parallax1.jpg" style="display:block; transform:translate3d(-50%, 716px, 0px);"></div>
               </div>
               <div class="section white" id="sectionWhite">
@@ -64,119 +64,72 @@
               </div>
               <div class="parallax-container">
                 <div class="parallax"><img src="assets/images/parallax2.jpg" style="display:block; transform: translate3d( -50%, 269px, 0px);" </div>  -->
-       
-  
-        
-                <div class="row">
-                        <form class="col s12 offset-s3">
-                          <div class="row">
-                            <div class="input-field col s3">  
-                              <input placeholder="First Name"id="first_name" type="text" class="validate">
-                              <label class="active" for="first_name"><i class="material-icons">account_box</i>First Name</label>
-                            </div>
-                            
-                              <div class="input-field col s3 offset-3">
-                              <input placeholder="Last Name" id="last_name" type="text" class="validate">
-                            
-                              <label class="active" for="last_name">Last Name</label>
-                            </div>
-                           </div> 
-                          
-                        
-                          <div class="row">
-                            <div class="input-field col s3">
-                              <input id="branch" type="text" class="validate">
-                              <label class="active" for="branch">Branch</label>
-                            </div>
-                            <div class="input-field col s3">
-                                    <input id="rank" type="text" class="validate">
-                                    <label for="rank">Rank</label>
-                                  </div>
-                          </div>
-                          <div class="row">
-                            <div class="input-field col 4">
-                              <input id="email" type="email" class="validate">
-                              <label class="active" for="email">Email</label>
-                            </div>
-                            <div class="input-field col 4">
-                                    <input id="zip" type="text" class="validate">
-                                    <label class="active" for="zip">Zip Code</label>
-                                  </div>
-                          </div>
-                          <div class="row">
-                                <div class="input-field col s6">
-                                  <input id="interests" type="text" class="validate">
-                                  <label class="active" for="branch">Hobbies/Intrests</label>
-                                </div>
-                        
-                        </form>
-                      </div>
-                            
 
 
-    <!-- Profile Panel -->
-    <div class="col-lg-6">
-        <div class="panel panel-info">
-            <div class="panel-heading">
-                <h3 class="panel-title">Profile:</h3>
-            </div>
-            <div class="panel-body">
-
-                    <div class="form-group">
-                        <form action="">
-                            <p>Are you currently seeking employment?</p>
-                            <input type="radio" name="gender" value="male">Yes
-                            <br>
-                            <input type="radio" name="gender" value="female">No
-                            <br>
-
-                        </form>
+    <div class="profileInputs">
+            <div class="row col s3 offset-s3">
+    <form class="col s12 offset-s3">
+                <div class="row col s3 offset-s3">
+                    <div class="input-field col s3">
+                        <input placeholder="First Name" id="first_name" type="text" class="validate">
+                        <label class="active" for="first_name">
+                            <i class="material-icons">account_box</i>First Name</label>
                     </div>
 
-                    <button class="btn btn-info" id="update-btn" type="submit">Update</button>
+                    <div class="input-field col s3 offset-3">
+                        <input placeholder="Last Name" id="last_name" type="text" class="validate">
+
+                        <label class="active" for="last_name">Last Name</label>
+                    </div>
+                </div>
+        </div>
 
 
-                </form>
+
+        <div class="row col s3 offset-s3">
+            <div class="input-field col s3">
+                <input id="email" type="email" class="validate">
+                <label class="active" for="email">Email</label>
+            </div>
+            <div class="input-field col s3 offset-3">
+                <input id="zip" type="text" class="validate">
+                <label class="active" for="zip">Zip Code</label>
             </div>
         </div>
-    </div>
 
-
-
-    </div>
-
-    <div class="panel panel-danger">
-        <div class="panel-heading">
-            <h3 class="panel-title">USER PROFILE</h3>
+        <div class="row col s3 offset-s3">
+            <div class="input-field col s3">
+                <input id="branch" type="text" class="validate">
+                <label class="active" for="branch">Branch</label>
+            </div>
+            <div class="input-field col s3 offset-3">
+                <input id="rank" type="text" class="validate">
+                <label for="rank">Rank</label>
+            </div>
         </div>
-        <div class="panel-body">
+        <div class="row col s3 offset-s3">
+            <div class="input-field col s6">
+                <input id="interests" type="text" class="validate">
+                <label class="active" for="branch">Hobbies/Intrests</label>
+                <button class="btn btn-info" id="update-btn" type="submit">Update</button>
 
-            <p>all the profile data from firebase goes here</p>
-
-
-
-
-
-
-            </form>
-        </div>
-    </div>
-    </div>
-
+            </div>
 
     </form>
-    </div>
-    </div>
-    </div> -->
+
+        </div>
 
 
 
-    <!-- Materialize link here -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/js/materialize.min.js">
-    </script>
-    <!--JS link here -->
-    <script type="text/javascript" src="assets/javascript/logic.js">
-    </script>
+
+
+
+        <!-- Materialize link here -->
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/js/materialize.min.js">
+        </script>
+        <!--JS link here -->
+        <script type="text/javascript" src="assets/javascript/logic.js">
+        </script>
 
 
 </body>
