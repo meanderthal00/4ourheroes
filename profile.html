@@ -5,87 +5,109 @@
     <!-- Favicon -->
     <link rel="icon" type="image/png" sizes="16x16" href="assets/images/connect.ico">
     <!-- google font link -->
-    <!-- <link href="https://fonts.googleapis.com/css?family=###" rel="stylesheet"> -->
-    <!-- bootstrap link -->
+    <link href="https://fonts.googleapis.com/css?family=Alegreya" rel="stylesheet">
+    <!-- Icon link -->
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
 
 
-     
 
-    
+
+
     <!--materialize link-->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/css/materialize.min.css">
     <!--bootswatch theme  -->
     <!-- <link rel= "stylesheet" href="###"> -->
-<!-- css link-->
+    <!-- css link-->
     <link rel="stylesheet" href="assets/css/style.css">
 
-    <title>Veterans Connect</title>
-
-    <header>
-            <title>4 our Heroes Profile</title>
-            
-                <header>
-            
-            
-                    <nav class="nav-extended">
-                        <div class="nav-wrapper">
-                            <a href="assets/images/logo.png" class="brand-logo"><img src="assets/images/logo.png" width="150" height="150"</a>
-                            <a href="#" data-activates="mobile-demo" class="button-collapse">
-                                <i class="material-icons">menu</i>
-                            </a>
-                            <ul id="nav-mobile" class="right hide-on-med-and-down">
-                                <li>
-                                    <a href="landing.html">Home</a>
-                                </li>
-                                <li>
-                                    <a href="badges.html">Components</a>
-                                </li>
-                                <li id="logOutBtn">
-                                    <a href="collapsible.html">Sign Out</a>
-                                </li>
-                            </ul>
-                            <ul class="side-nav" id="mobile-demo">
-                                <li>
-                                    <a href="sass.html">Sass</a>
-                                </li>
-                                <li>
-                                    <a href="badges.html">Components</a>
-                                </li>
-                                <li>
-                                    <a href="collapsible.html">JavaScript</a>
-                                </li>
-                            </ul>
-                        </div>
-                        <div class="nav-content">
-                            <ul class="tabs tabs-transparent">
-                                <li class="tab">
-                                    <a href="#test1">Jobs</a>
-                                </li>
-                                <li class="tab">
-                                    <a class="active" href="#test2">Social</a>
-                                </li>
-            
-                                <li class="tab">
-                                    <a href="#test4">Resources</a>
-                                </li>
-                            </ul>
-                        </div>
-                    </nav>
-                    <div id="test1" class="col s12">Employer/search page links here </div>
-                    <div id="test2" class="col s12">Meet Up page links here</div>
-            
-                    <div id="test4" class="col s12">Resources page links here</div>
-            
-            
-            
-                </header>
+</head>
 
 
-    </header>
+<title>4 our Heroes Profile</title>
 
-    <body>
-  <!-- Profile Panel -->
-  <div class="col-lg-6">
+<header>
+
+
+    <nav class="nav-extended">
+        <div class="nav-wrapper">
+                <a href="landing.html" class="brand-logo">
+                    <img src="assets/images/logo.png" width="150" height="150" </a>
+                    <ul id="nav-mobile" class="right hide-on-med-and-down">
+                        <li>
+                            <a href="landing.html">Home</a>
+                        </li>
+                        <li>
+                            <a href="profile.html">Profile</a>
+                        </li>
+                        <li>
+                            <a class="waves-effect waves-light btn">Sign out</a>
+                        </li>
+                    </ul>
+            </div>
+
+
+
+</header>
+
+
+
+
+<body id="profileBody">
+        <!-- <div class="parallax-container">
+                <div class="parallax"><img src="assets/images/parallax1.jpg" style="display:block; transform:translate3d(-50%, 716px, 0px);"></div>
+              </div>
+              <div class="section white" id="sectionWhite">
+                <div class="row container">
+                  <h2 class="header">Parallax</h2>
+                  <p class="grey-text text-darken-3 lighten-3">Parallax is an effect where the background content or image in this case, is moved at a different speed than the foreground content while scrolling.</p>
+                </div>
+              </div>
+              <div class="parallax-container">
+                <div class="parallax"><img src="assets/images/parallax2.jpg" style="display:block; transform: translate3d( -50%, 269px, 0px);" </div>  -->
+
+                <div class="row">
+                        <form class="col s12">
+                          <div class="row center-align">
+                            <div class="input-field col s3 offset-3">
+                              <input id="first_name" type="text" class="validate">
+                              <label for="first_name">First Name</label>
+                            </div>
+                            
+                              <div class="input-field col s3 offset-3">
+                              <input id="last_name" type="text" class="validate">
+                              <label for="last_name">Last Name</label>
+                            </div>
+                           </div> 
+                          
+                        
+                          <div class="row center-align">
+                            <div class="input-field col s3">
+                              <input id="branch" type="text" class="validate">
+                              <label for="branch">Branch</label>
+                            </div>
+                            <div class="input-field col s3">
+                                    <input id="rank" type="text" class="validate">
+                                    <label for="rank">Rank</label>
+                                  </div>
+                          </div>
+                          <div class="row center-align">
+                            <div class="input-field col 4">
+                              <input id="email" type="email" class="validate">
+                              <label for="email">Email</label>
+                            </div>
+                            <div class="input-field col 4">
+                                    <input id="zip" type="text" class="validate">
+                                    <label for="zip">Zip Code</label>
+                                  </div>
+                          </div>
+                        
+                        </form>
+                      </div>
+                            
+
+
+    <!-- Profile Panel -->
+    <div class="col-lg-6">
         <div class="panel panel-info">
             <div class="panel-heading">
                 <h3 class="panel-title">Profile:</h3>
@@ -93,7 +115,7 @@
             <div class="panel-body">
 
                 <!-- New User-->
-                <form role="form">
+    <form role="form">
                     <div class="form-group">
                         <img src="" id="profilephoto">
                         <button class="btn btn-info" id="upload-btn" type="submit">Image Upload</button>
@@ -144,33 +166,40 @@
 
 
 
-</div>
-
-<div class="panel panel-danger">
-    <div class="panel-heading">
-        <h3 class="panel-title">USER PROFILE</h3>
     </div>
-    <div class="panel-body">
 
-        <p>all the profile data from firebase goes here</p>
+    <div class="panel panel-danger">
+        <div class="panel-heading">
+            <h3 class="panel-title">USER PROFILE</h3>
+        </div>
+        <div class="panel-body">
+
+            <p>all the profile data from firebase goes here</p>
 
 
 
 
 
 
-        </form>
+            </form>
+        </div>
     </div>
-</div>
-</div>
+    </div>
 
 
-                </form>
-            </div>
-        </div>
-        </div>
-
+    </form>
+    </div>
+    </div>
+    </div> -->
 
 
 
-    </body>
+    <!-- Materialize link here -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/js/materialize.min.js">
+    </script>
+    <!--JS link here -->
+    <script type="text/javascript" src="assets/javascript/logic.js">
+    </script>
+
+
+</body>

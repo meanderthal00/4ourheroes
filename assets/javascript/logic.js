@@ -1,7 +1,9 @@
-// This is for the Parallax effect
+
 
 $(document).ready(function(){
 
+// This is for the Parallax effect
+  $('.parallax').parallax();
   // signout function
   $("#logOutBtn").on("click", function (event) {
     firebase.auth().signOut().then(function () {
@@ -108,7 +110,8 @@ console.log("tokenWebsite:", tokenWebsite);
 //   });
 
 
-//     $('.parallax').parallax();
+
+
 
     $('.parallax').parallax();
   

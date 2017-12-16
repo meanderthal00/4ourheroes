@@ -35,9 +35,9 @@ body {
     width: 100%;
 }
 
-.container .row {
+/* .container .row {
     margin: 0 auto;
-}
+} */
 
 #loginBody {
     background-image: url("../images/loginimg.jpg");
@@ -76,5 +76,15 @@ body {
 
    height:100px !important;
 }
+
+/* .parallax-container{
+    height: 1200px;
+    background-color: red;
+} */
+.sectionWhite {
+    background-color: cornflowerblue !important;
+    
+}
+
 
 
