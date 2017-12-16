@@ -60,7 +60,7 @@ $(document).ready(function(){
           url: "https://api.meetup.com/find/upcoming_events",
           method: 'GET',
           header:{
-            "Access-Control-Allow-Origin": "https://meanderthal00.github.io/vetransConnect/landing.html"
+            "Access-Control-Allow-Origin": "https://meanderthal00.github.io"
           },
           data:{
             // page: 5,
