@@ -55,6 +55,7 @@ $(document).ready(function(){
      
     
       // ajax function call for landing page ... meet-ups
+      
         $.ajax({
           url: "https://api.meetup.com/find/upcoming_events",
           method: 'GET',
@@ -63,15 +64,18 @@ $(document).ready(function(){
             // text:"jogging",
             // lat:userLat,
             // lon:userLong,
+            redirect_uri: "https://meanderthal00.github.io/vetransConnect/landing.html",
             access_token:accessToken,
+            dataType:"jsonp",
             key: "5a1b20747e54172335c4d412b296823",
             sign:"true"
           }
         }).done(function(response){
+          alert("api call")
           console.log(response);
         });
       });
-
+    
         //ajax function for usajobs
     
 
