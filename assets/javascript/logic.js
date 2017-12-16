@@ -22,6 +22,7 @@ $(document).ready(function(){
     var token = "";
     tokenWebsite = window.location.href;
     console.log("tokenWebsite:", tokenWebsite);
+
     
         $.ajax({
           url: "https://maps.googleapis.com/maps/api/geocode/json",
@@ -45,13 +46,13 @@ $(document).ready(function(){
           
         });
     
-        if(token.length>0){
+
           var token = new URL(tokenWebsite).hash.split('&').filter(function(el) { if(el.match('access_token') !== null) return true; });
           console.log("token:", token);
           var accessToken = token[0].split("=")[1];
           console.log("accessToken:", accessToken);
           
-        };
+     
     
       // ajax function call for landing page ... meet-ups
         $.ajax({
