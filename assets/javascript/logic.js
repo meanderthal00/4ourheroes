@@ -59,12 +59,14 @@ $(document).ready(function(){
         $.ajax({
           url: "https://api.meetup.com/find/upcoming_events",
           method: 'GET',
+          header:{
+            "Access-Control-Allow-Origin": "https://meanderthal00.github.io"
+          },
           data:{
             // page: 5,
             // text:"jogging",
             // lat:userLat,
             // lon:userLong,
-            redirect_uri: "https://meanderthal00.github.io/vetransConnect/landing.html",
             access_token:accessToken,
             dataType:"jsonp",
             key: "5a1b20747e54172335c4d412b296823",
