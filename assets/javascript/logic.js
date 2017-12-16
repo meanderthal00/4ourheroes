@@ -81,8 +81,6 @@ $(document).ready(function(){
       url:"https://data.usajobs.gov/api/search?JobCategoryCode=2210",
       method: 'GET',
       headers:{
-        Host:'data.usajobs.gov',
-        'User-Agent':'alexarobinson19@gmail.com',
         'Authorization-Key':"hIa5Qx84CEfa6bI3BB2IVTBA30EYEYetV78R14xSuu4="
 
         //parameters to search:
