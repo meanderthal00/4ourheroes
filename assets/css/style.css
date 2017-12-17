@@ -92,10 +92,10 @@ body {
 
 
 
-#profileBody{
+/* #profileBody{
     background-image: url("../images/files.jpg");
     background-size:cover;
-}
+} */
 
 #meetText{
     color: white;
@@ -116,15 +116,18 @@ body {
 .profileInputs{
     color: white;
     padding: 20px;
-    margin-top: 25px;
-    background-image: linear-gradient(rgba(164,164,164,.75),rgba(0,0,0,.75));  
-    /* border-style: inset; */
-    /* border-width: 15px; */
-    
-    border-radius: 18px; 
+    /* margin-top: 25px; */
+    background-image: linear-gradient(rgba(164,164,164,.5),rgba(0,0,0,.5));  
+    /* border-radius: 18px; */
 
 }
 
 input {
     color:white;
+}
+.section_white{
+    background-color: transparent;
+}
+.active{
+    color:red;
 }

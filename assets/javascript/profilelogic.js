@@ -1,3 +1,7 @@
+$(document).ready(function(){
+    // Parallax functionality
+    $('.parallax').parallax();
+
 //get firebase crap all sorted out
 var config = {
     apiKey: "AIzaSyD9zUxSiYvAJ5aS_EhGLIx_MWILBbJy4TY",
@@ -49,4 +53,5 @@ $("#update-btn").on("click", function (event) {
     var zip = childSnapshot.val().zipcode;
     var hobbies = childSnapshot.val().hobbies;
    
+});
 });
