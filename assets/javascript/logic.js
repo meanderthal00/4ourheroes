@@ -1,7 +1,8 @@
 
 
 $(document).ready(function(){
-
+// Parallax functionality
+$('.parallax').parallax();
   // signout function
   $("#logOutBtn").on("click", function (event) {
     firebase.auth().signOut().then(function () {

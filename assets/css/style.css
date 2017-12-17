@@ -33,23 +33,10 @@ body {
     color: black;
 }
 
-
-/* .parallax-container {
-    height: 1000px;
-} */
-
-.container {
-    display: flex;
-    position: absolute;
-    top: 0;
-    left: 0;
-    height: 100%;
-    width: 100%;
+#para1{
+    background-size: auto
 }
 
-/* .container .row {
-    margin: 0 auto;
-} */
 
 #nameStyle{
     color: rgb(94, 6, 6);
