@@ -79,23 +79,18 @@ body {
     background-image: linear-gradient(black, darkgrey,black);
     
 }
-/* #sectionWhite {
-    background:red;
-} */
 
+#para1{
+   
+    background-repeat: no-repeat;
+    background-size: cover;
+}
  .nav-wrapper {
 
    height:100px !important;
 }
 
-/* .parallax-container{
-    height: 1200px;
-    background-color: red;
-} */
-.sectionWhite {
-    background-color: cornflowerblue !important;
-    
-}
+
 
 #profileBody{
     background-image: url("../images/files.jpg");
@@ -107,8 +102,7 @@ body {
     padding: 20px;
     margin-top: 25px;
     background-image: linear-gradient(rgba(164,164,164,.5),rgba(0,0,0,.5));  
-    /* border-style: inset; */
-    /* border-width: 15px; */
+   
     
     border-radius: 18px;
 }
@@ -130,9 +124,7 @@ body {
     border-radius: 18px; 
 
 }
-#jobs{
-    margin-top: -63px;
-}
+
 input {
     color:white;
 }
