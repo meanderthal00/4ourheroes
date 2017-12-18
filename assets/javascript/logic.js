@@ -45,6 +45,7 @@ $(document).ready(function () {
     window.location.replace("https://secure.meetup.com/oauth2/authorize?client_id=uslukvp5bbuco9nni5lgm900av&response_type=token&redirect_uri=https://meanderthal00.github.io/vetransConnect/landing.html");
     //variable for establishing the token key
 //pulled from the tokenWebsite var
+if(window.location.href!=="https://secure.meetup.com/oauth2/authorize?client_id=uslukvp5bbuco9nni5lgm900av&response_type=token&redirect_uri=https://meanderthal00.github.io/vetransConnect/landing.html"){
   token = new URL(tokenWebsite).hash.split('&').filter(function (el) {
     if (el.match('access_token') !== null) return true;
   });
@@ -52,6 +53,7 @@ $(document).ready(function () {
   //spliting the access token from the property title
   accessToken = token[0].split("=")[1];
   console.log("accessToken:", accessToken);
+}
   });
 
 
