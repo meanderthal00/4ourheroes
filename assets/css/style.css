@@ -33,7 +33,9 @@ body {
     color: black;
 }
 
-
+#info{
+    margin-bottom: -46px;
+}
 
 #nameStyle{
     color: rgb(94, 6, 6);
@@ -128,4 +130,12 @@ input {
 }
 .section_white{
     background-color: transparent;
+}
+
+.page-footer{
+    background-image: -webkit-gradient(linear, left top, left bottom, from(darkgrey), black);
+    background-image: -webkit-linear-gradient(top, darkgrey, black);
+    background-image: -moz-linear-gradient(top, darkgrey, black);
+    background-image: linear-gradient(to bottom, darkgrey, black);
+
 }
