@@ -8,42 +8,49 @@ $(document).ready(function () {
       console.log("User has signed out");
     }).catch(function (error) {
       // An error happened.
+      console.log("signout error");
     });
   });
 
-  var tokenWebsite = "";
-  var token = "";
-  tokenWebsite = window.location.href;
+  //declaring token website to cature url
+  //for retrieving the Meet Up access token
+  var tokenWebsite = window.location.href;
   console.log("tokenWebsite:", tokenWebsite);
 
 
-  $.ajax({
-    url: "https://maps.googleapis.com/maps/api/geocode/json",
-    method: 'GET',
-    data: {
-      address: "32812",
-      key: "AIzaSyDbO-ivrJFAH2KzMeRPuVOemHCxDqL3guQ"
-    }
-  }).done(function (response) {
+  // $.ajax({
+  //   url: "https://maps.googleapis.com/maps/api/geocode/json",
+  //   method: 'GET',
+  //   data: {
+  //     address: "32812",
+  //     key: "AIzaSyDbO-ivrJFAH2KzMeRPuVOemHCxDqL3guQ"
+  //   }
+  // }).done(function (response) {
 
-    console.log(response.results[0].geometry.location.lat);
-    console.log(response.results[0].geometry.location.lng)
-    userLat = response.results[0].geometry.location.lat;
-    userLong = response.results[0].geometry.location.lng;
+  //   console.log(response.results[0].geometry.location.lat);
+  //   console.log(response.results[0].geometry.location.lng)
+  //   userLat = response.results[0].geometry.location.lat;
+  //   userLong = response.results[0].geometry.location.lng;
 
-  });
+  // });
 
+  //button for signing into Meet Up and getting access token
   $("#meetBtn").on("click", function () {
     console.log("button pressed");
+    //using oauth consumer key, send user to meet up
+    //so that we can get authorization to their account
+    //will redirect them to the landing.html page
     window.location.replace("https://secure.meetup.com/oauth2/authorize?client_id=uslukvp5bbuco9nni5lgm900av&response_type=token&redirect_uri=https://meanderthal00.github.io/vetransConnect/landing.html");
 
   });
 
-
+//variable for establishing the token key
+//pulled from the tokenWebsite var
   var token = new URL(tokenWebsite).hash.split('&').filter(function (el) {
     if (el.match('access_token') !== null) return true;
   });
   console.log("token:", token);
+  //spliting the access token from the property title
   var accessToken = token[0].split("=")[1];
   console.log("accessToken:", accessToken);
 
@@ -61,13 +68,11 @@ $(document).ready(function () {
     }
   }).done(function (response) {
     console.log(response);
+
   });
 
 
   //ajax function for usajobs
-
-
-
   $("#addLocation").on("click", function () {
     console.log("submit pressed");
     var locale = $("#locationInput").val().trim();
@@ -77,18 +82,16 @@ $(document).ready(function () {
         method: 'GET',
         headers: {
           'Authorization-Key': "hIa5Qx84CEfa6bI3BB2IVTBA30EYEYetV78R14xSuu4="
-
         }
       }).done(function (response) {
         console.log(response);
-
         response.SearchResult.SearchResultItems.forEach(renderJobs);
       }),
       function (error, response, body) {
         var data = JSON.parse(body);
       };
   });
-});
+
 
 
 function renderJobs(element, index) {
@@ -109,3 +112,4 @@ function renderJobs(element, index) {
   $("#jobText").append(c);
 
 }
+});
