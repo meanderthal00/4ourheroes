@@ -45,14 +45,21 @@ $(document).ready(function () {
     window.location.replace("https://secure.meetup.com/oauth2/authorize?client_id=uslukvp5bbuco9nni5lgm900av&response_type=token&redirect_uri=https://meanderthal00.github.io/vetransConnect/landing.html");
     //variable for establishing the token key
 //pulled from the tokenWebsite var
-  setTimeout(tokenGrab, 3000);
-
+    meetUpRequest(tokenWebsite);
   });
 
 
 
   //   // ajax function call for landing page ... meet-ups
-  
+
+  function meetUpRequest(Website){
+    token = new URL(Website).hash.split('&').filter(function (el) {
+      if (el.match('access_token') !== null) return true;
+    });
+    console.log("token:", token);
+    //spliting the access token from the property title
+    accessToken = token[0].split("=")[1];
+    console.log("accessToken:", accessToken);
   $.ajax({
     url: "https://api.meetup.com/find/upcoming_events",
     method: 'GET',
@@ -67,7 +74,7 @@ $(document).ready(function () {
     response.events.forEach(renderMeets);
 
   });
-
+  };
 
   //ajax function for usajobs
   $("#addLocation").on("click", function () {
@@ -136,13 +143,5 @@ function renderMeets(element, index){
 
 }
 
-function tokenGrab (tokenWebsite){
-  token = new URL(tokenWebsite).hash.split('&').filter(function (el) {
-    if (el.match('access_token') !== null) return true;
-  });
-  console.log("token:", token);
-  //spliting the access token from the property title
-  accessToken = token[0].split("=")[1];
-  console.log("accessToken:", accessToken);
-}
+
 });
