@@ -61,20 +61,20 @@ $(document).ready(function () {
     //spliting the access token from the property title
     accessToken = token[0].split("=")[1];
     console.log("accessToken:", accessToken);
-  $.ajax({
-    url: "https://api.meetup.com/find/upcoming_events",
-    method: 'GET',
-    data: {
-      page: 5,
-      access_token: accessToken,
-      key: "5a1b20747e54172335c4d412b296823",
-      sign: "true"
-    }
-  }).done(function (response) {
-    console.log(response);
-    response.events.forEach(renderMeets);
+  // $.ajax({
+  //   url: "https://api.meetup.com/find/upcoming_events",
+  //   method: 'GET',
+  //   data: {
+  //     page: 5,
+  //     access_token: accessToken,
+  //     key: "5a1b20747e54172335c4d412b296823",
+  //     sign: "true"
+  //   }
+  // }).done(function (response) {
+  //   console.log(response);
+  //   response.events.forEach(renderMeets);
 
-  });
+  // });
   };
 
   //ajax function for usajobs
