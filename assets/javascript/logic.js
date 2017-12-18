@@ -14,7 +14,7 @@ $(document).ready(function () {
 
   //declaring token website to cature url
   //for retrieving the Meet Up access token
-  var tokenWebsite = window.location.href;
+  var tokenWebsite = "";
   var token = "";
   var accessToken="";
   console.log("tokenWebsite:", tokenWebsite);
@@ -52,8 +52,9 @@ $(document).ready(function () {
 
   //   // ajax function call for landing page ... meet-ups
 
-  function meetUpRequest(Website){
-    token = new URL(Website).hash.split('&').filter(function (el) {
+  function meetUpRequest(){
+    tokenWebsite=window.location.href;
+    token = new URL(tokenWebsite).hash.split('&').filter(function (el) {
       if (el.match('access_token') !== null) return true;
     });
     console.log("token:", token);
