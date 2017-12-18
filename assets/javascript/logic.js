@@ -15,6 +15,8 @@ $(document).ready(function () {
   //declaring token website to cature url
   //for retrieving the Meet Up access token
   var tokenWebsite = window.location.href;
+  var token = "";
+  var accessToken="";
   console.log("tokenWebsite:", tokenWebsite);
 
 
@@ -41,22 +43,21 @@ $(document).ready(function () {
     //so that we can get authorization to their account
     //will redirect them to the landing.html page
     window.location.replace("https://secure.meetup.com/oauth2/authorize?client_id=uslukvp5bbuco9nni5lgm900av&response_type=token&redirect_uri=https://meanderthal00.github.io/vetransConnect/landing.html");
-
-  });
-
-//variable for establishing the token key
+    //variable for establishing the token key
 //pulled from the tokenWebsite var
-  var token = new URL(tokenWebsite).hash.split('&').filter(function (el) {
+  token = new URL(tokenWebsite).hash.split('&').filter(function (el) {
     if (el.match('access_token') !== null) return true;
   });
   console.log("token:", token);
   //spliting the access token from the property title
-  var accessToken = token[0].split("=")[1];
+  accessToken = token[0].split("=")[1];
   console.log("accessToken:", accessToken);
+  });
 
 
 
   //   // ajax function call for landing page ... meet-ups
+  
   $.ajax({
     url: "https://api.meetup.com/find/upcoming_events",
     method: 'GET',
@@ -68,6 +69,7 @@ $(document).ready(function () {
     }
   }).done(function (response) {
     console.log(response);
+    response.events.forEach(renderMeets);
 
   });
 
@@ -110,6 +112,32 @@ function renderJobs(element, index) {
   console.log(minPay);
   c.append(`<p>Minimum Pay: ${minPay}</p>`);
   $("#jobText").append(c);
+
+}
+
+function renderMeets(element, index){
+  console.log("success in rendering meet-ups function call");
+  var d = $("<div>");
+  d.addClass("newMeet");
+  var title = element.name;
+  console.log(title);
+  var a = $(`<a>${title}</a>`);
+  d.append(a);
+  var group = element.group.name;
+  console.log(group);
+  d.append(group);
+  var link = element.link;
+  console.log(link);
+  a.attr("href", link);
+  a.attr("target", "_blank");
+  var date = element.local_date;
+  d.append(date);
+  var time = element.local_time;
+  console.log(date);
+  console.log(time);
+  d.append(time)
+  $("#meetText").append(d);
+
 
 }
 });
