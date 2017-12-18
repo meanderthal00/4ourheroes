@@ -6,15 +6,15 @@
     <link rel="icon" type="image/png" sizes="16x16" href="assets/images/connect.ico">
     <!-- google font link -->
     <link href="https://fonts.googleapis.com/css?family=Alegreya" rel="stylesheet">
-<!-- Icon link -->
-<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <!-- Icon link -->
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
 
     <!-- css link-->
     <link rel="stylesheet" href="assets/css/style.css">
-   
+
     <!--materialize link-->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/css/materialize.min.css">
-   
+
 
 
     <title>4 our Heroes Index</title>
@@ -25,28 +25,30 @@
 <header>
 
 
-        <nav class="nav-extended">
-                <div class="nav-wrapper">
-                        <a href="landing.html" class="brand-logo">
-                            <img src="assets/images/logo.png" width="150" height="150" </a>
-                            <ul id="nav-mobile" class="right hide-on-med-and-down">
-                                <li>
-                                    <a href="landing.html">Home</a>
-                                </li>
-                                <li>
-                                    <a href="profile.html">Profile</a>
-                                </li>
-                                <li>
-                                    <a class="waves-effect waves-light btn" id="signOutBtn">Sign out</a>
-                                </li>
-                                <div class="row">
-                                    <div style="font-size:18px; margin-bottom:10px;">
-                                        <p id="userId"><em> name rank, branch</em></p>
-                                    </div>
-                                    </div>
-                                </li>
-                            </ul>
+    <nav class="nav-extended">
+        <div class="nav-wrapper">
+            <a href="landing.html" class="brand-logo">
+                <img src="assets/images/logo.png" width="150" height="150" </a>
+                <ul id="nav-mobile" class="right hide-on-med-and-down">
+                    <li>
+                        <a href="landing.html">Home</a>
+                    </li>
+                    <li>
+                        <a href="profile.html">Profile</a>
+                    </li>
+                    <li>
+                        <a class="waves-effect waves-light btn" id="signOutBtn">Sign out</a>
+                    </li>
+                    <div class="row">
+                        <div style="font-size:18px; margin-bottom:10px;">
+                            <p id="userId">
+                                <em> name rank, branch</em>
+                            </p>
+                        </div>
                     </div>
+                    </li>
+                </ul>
+        </div>
 
 
 
@@ -54,41 +56,48 @@
 
 
 <body id="indexBody">
-        <div class="parallax-container">
-                <div class="parallax"id="para1"><img src="assets/images/indeximg.jpg" style="background-repeat:no-repeat" "background-size:cover"></div>
-              </div>
-              <div class="section white" style="background-image: linear-gradient(black, darkgrey,black)">
-                    <div class="row container">
-                        <div class="col s6" id="jobs">
-                            <p class="z-depth-5"id="jobText">
-                                Lorem ipsum dolor sit amet consectetur adipisicing elit. Illum ut omnis quasi tempora! Ex, porro. Enim tempore, obcaecati
-                                sapiente aperiam minima harum esse maxime cumque excepturi sint omnis dolorem beatae. Lorem ipsum dolor
-                                sit amet, consectetur adipisicing elit. Ratione illum sint, in dignissimos ipsam odit eum nisi labore
-                                beatae placeat architecto voluptates sunt maiores provident distinctio minima saepe facilis eaque. Lorem
-                                ipsum, dolor sit amet consectetur adipisicing elit. Numquam libero natus minus eum dicta, ratione magni
-                                at tenetur cum adipisci aut explicabo corrupti. Harum nihil, voluptates odio beatae quisquam obcaecati.
-                                <br>
-                                <a class="waves-effect waves-light btn" id="meetBtn">
-                                    <i class="material-icons left">work</i>Job site</a>
-                            </p>
-                        </div>
-                        <div class="col s6" id="meetUp">
-                                
-                                <p  class="z-depth-5"id="meetText">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Veniam vitae impedit autem vero quibusdam eius ipsum laborum totam, deserunt similique excepturi! Neque ipsam hic debitis, tenetur nobis incidunt autem saepe.
-                                    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sapiente nam hic fugit nesciunt accusamus nulla tenetur inventore animi laboriosam error amet modi voluptas fugiat rem, eaque molestiae pariatur minima impedit.
-                                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Quia hic praesentium ea molestiae quidem quod! Minus consectetur, tenetur et eius porro magnam aliquam tempora dolores. Aliquam iure in odio officiis?
-                                    <br>
-                                <a class="waves-effect waves-light btn" id="meetBtn"><i class="material-icons left">group</i>Meet Up</a>
-                            </p>
-            
-                        </div>
-            
-                    </div>
+    <div class="parallax-container">
+        <div class="parallax" id="para1">
+            <img src="assets/images/indeximg.jpg" style="background-repeat:no-repeat" "background-size:cover">
+        </div>
+    </div>
+    <div class="section white" style="background-image: linear-gradient(black, darkgrey,black)">
+        <div class="row container">
+            <div class="col s6" id="jobs">
+                <div class="input-field">
+                    <input placeholder="Search a location for jobs" type="text" class="text validate" id="locationInput">
                 </div>
-              <div class="parallax-container">
-                <div class="parallax" id="para2"><img src="assets/images/indeximg2.jpg" height="1950px"></div>
-              </div>
-    
+                <br>
+                <button class="btn waves-effect waves-light text" type="submit" id="addLocation">
+                    <i class="material-icons left">work</i>Submit</button>
+                <p class="z-depth-5" id="jobText">
+
+                </p>
+            </div>
+            <div class="col s6" id="meetUp">
+
+                <p class="z-depth-5" id="meetText">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Veniam vitae impedit autem vero quibusdam eius
+                    ipsum laborum totam, deserunt similique excepturi! Neque ipsam hic debitis, tenetur nobis incidunt autem
+                    saepe. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sapiente nam hic fugit nesciunt accusamus
+                    nulla tenetur inventore animi laboriosam error amet modi voluptas fugiat rem, eaque molestiae pariatur
+                    minima impedit. Lorem ipsum dolor sit amet consectetur adipisicing elit. Quia hic praesentium ea molestiae
+                    quidem quod! Minus consectetur, tenetur et eius porro magnam aliquam tempora dolores. Aliquam iure in
+                    odio officiis?
+                    <br>
+                    <a class="waves-effect waves-light btn" id="meetBtn">
+                        <i class="material-icons left">group</i>Meet Up</a>
+                </p>
+
+            </div>
+
+        </div>
+    </div>
+    <div class="parallax-container">
+        <div class="parallax" id="para2">
+            <img src="assets/images/indeximg2.jpg" height="1950px">
+        </div>
+    </div>
+
     <!-- <div id="mainContainer">
         <div class="row col s12">
             <div class="col s6" id="meetUp">
@@ -161,7 +170,7 @@
 
 
         </div> -->
-   
+
 
 
 
@@ -189,10 +198,8 @@
     <script src="https://www.gstatic.com/firebasejs/4.8.0/firebase.js"></script>
 
     <!--JQ link here-->
-    <script
-    src="https://code.jquery.com/jquery-3.2.1.min.js"
-    integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
-    crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-3.2.1.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
+        crossorigin="anonymous"></script>
     <!-- Materialize link here -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/js/materialize.min.js">
     </script>
