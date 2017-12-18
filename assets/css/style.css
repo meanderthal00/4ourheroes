@@ -33,9 +33,6 @@ body {
     color: black;
 }
 
-#para1{
-    background-size: auto
-}
 
 
 #nameStyle{
@@ -53,9 +50,9 @@ body {
     background-image: url("../images/loginimg.jpg");
     background-size: 1920px;
 }
-#indexBody {
+/* #indexBody {
     background-image: url("../images/indeximg.jpg");
-    background-size: 1920px;
+    background-size: 1920px; */
     
 }
 .btn{
@@ -80,11 +77,11 @@ body {
     
 }
 
-#para1{
+/* #para1{
    
     background-repeat: no-repeat;
     background-size: cover;
-}
+} */
  .nav-wrapper {
 
    height:100px !important;
@@ -131,7 +128,4 @@ input {
 }
 .section_white{
     background-color: transparent;
-}
-.active{
-    color:red;
 }
