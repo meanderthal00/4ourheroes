@@ -19,23 +19,7 @@ $(document).ready(function () {
   var accessToken="";
 
 
-  // $.ajax({
-  //   url: "https://maps.googleapis.com/maps/api/geocode/json",
-  //   method: 'GET',
-  //   data: {
-  //     address: "32812",
-  //     key: "AIzaSyDbO-ivrJFAH2KzMeRPuVOemHCxDqL3guQ"
-  //   }
-  // }).done(function (response) {
-
-  //   console.log(response.results[0].geometry.location.lat);
-  //   console.log(response.results[0].geometry.location.lng)
-  //   userLat = response.results[0].geometry.location.lat;
-  //   userLong = response.results[0].geometry.location.lng;
-
-  // });
-
-  //button for signing into Meet Up and getting access token
+   //button for signing into Meet Up and getting access token
   $("#meetBtn").on("click", function () {
     console.log("button pressed");
     //using oauth consumer key, send user to meet up
@@ -46,7 +30,7 @@ $(document).ready(function () {
 //pulled from the tokenWebsite var
   });
 
-  meetUpRequest(tokenWebsite);
+  window.location.href.onchange(meetUpRequest());
   
 
   //   // ajax function call for landing page ... meet-ups
