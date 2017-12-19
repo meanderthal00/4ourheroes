@@ -43,6 +43,7 @@ $(document).ready(function () {
     });
     console.log("token:", token);
     //spliting the access token from the property title
+    if(token.length>=0){
     accessToken = token[0].split("=")[1];
     console.log("accessToken:", accessToken);
   $.ajax({
@@ -59,6 +60,7 @@ $(document).ready(function () {
     response.events.forEach(renderMeets);
 
   });
+};
   };
 
   //ajax function for usajobs
@@ -112,13 +114,13 @@ function renderMeets(element, index){
   d.append(a);
   var group = element.group.name;
   console.log(group);
-  d.append(group);
+  d.append(`<br> ${group}<br>`);
   var link = element.link;
   console.log(link);
   a.attr("href", link);
   a.attr("target", "_blank");
   var date = element.local_date;
-  d.append(date);
+  d.append(`${date}<br>`);
   var time = element.local_time;
   console.log(date);
   console.log(time);
