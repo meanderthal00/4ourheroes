@@ -6,9 +6,10 @@ body {
 
 #modal1{
     border-radius: 30px;
-    height: 700px;
+    height: 450px;
     width: 800px;
     overflow: auto;
+    background-color: transparent;
 }
 .modal-content{
     background-color: rgb(119, 118, 118); 
