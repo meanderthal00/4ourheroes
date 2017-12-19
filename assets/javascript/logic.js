@@ -24,20 +24,15 @@ $(document).ready(function () {
     //so that we can get authorization to their account
     //will redirect them to the landing.html page
     window.location.replace("https://secure.meetup.com/oauth2/authorize?client_id=uslukvp5bbuco9nni5lgm900av&response_type=token&redirect_uri=https://meanderthal00.github.io/vetransConnect/landing.html");
-    //variable for establishing the token key
-//pulled from the tokenWebsite var
-    var m = window.location.href;
-    if(m.includes("#access_token")){
-      meetUpRequest();      
-    }
   });
 
-  
+  if(window.location.href.includes("access_token")){
+      meetUpRequest();      
+  }
 
   //   // ajax function call for landing page ... meet-ups
 
   function meetUpRequest(){
-    tokenWebsite=window.location.href;
     console.log("tokenWebsite:", tokenWebsite);    
     var token = new URL(tokenWebsite).hash.split('&').filter(function (el) {
       if (el.match('access_token') !== null) return true;
