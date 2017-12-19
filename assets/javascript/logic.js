@@ -30,7 +30,7 @@ $(document).ready(function () {
     //using oauth consumer key, send user to meet up
     //so that we can get authorization to their account
     //will redirect them to the landing.html page
-    window.location.replace("https://secure.meetup.com/oauth2/authorize?client_id=uslukvp5bbuco9nni5lgm900av&response_type=token&redirect_uri=https://meanderthal00.github.io/vetransConnect/landing.html");
+    window.location.replace("https://secure.meetup.com/oauth2/authorize?client_id=uslukvp5bbuco9nni5lgm900av&response_type=token&redirect_uri=https://meanderthal00.github.io/4ourheroes/landing.html");
   });
 
   if (window.location.href.includes("access_token")) {
