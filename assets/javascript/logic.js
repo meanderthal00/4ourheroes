@@ -15,8 +15,6 @@ $(document).ready(function () {
   //declaring token website to cature url
   //for retrieving the Meet Up access token
   var tokenWebsite = "";
-  var token = "";
-  var accessToken="";
 
 
    //button for signing into Meet Up and getting access token
@@ -38,13 +36,12 @@ $(document).ready(function () {
   function meetUpRequest(){
     tokenWebsite=window.location.href;
     console.log("tokenWebsite:", tokenWebsite);    
-    token = new URL(tokenWebsite).hash.split('&').filter(function (el) {
+    var token = new URL(tokenWebsite).hash.split('&').filter(function (el) {
       if (el.match('access_token') !== null) return true;
     });
     console.log("token:", token);
     //spliting the access token from the property title
-    if(token.length>=0){
-    accessToken = token[0].split("=")[1];
+    var accessToken = token[0].split("=")[1];
     console.log("accessToken:", accessToken);
   $.ajax({
     url: "https://api.meetup.com/find/upcoming_events",
@@ -60,7 +57,6 @@ $(document).ready(function () {
     response.events.forEach(renderMeets);
 
   });
-};
   };
 
   //ajax function for usajobs
