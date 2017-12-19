@@ -51,8 +51,8 @@ body {
 }
 
 #loginBody {
-    background-image: url("../images/loginimg.jpg");
-    background-size: 1920px;
+    background-image: url("../images/loginimg.png");
+    background-size: cover;
 }
 
 .btn {
