@@ -3,8 +3,10 @@ $(document).ready(function () {
   // Parallax functionality
   $('.parallax').parallax();
   // carousel function
+
   $('.carousel.carousel-slider').carousel({fullWidth: true});
   
+
   // signout function
   $("#logOutBtn").on("click", function (event) {
     firebase.auth().signOut().then(function () {
@@ -18,7 +20,6 @@ $(document).ready(function () {
   //declaring token website to cature url
   //for retrieving the Meet Up access token
   var tokenWebsite = "";
-  var token =[];
 
 
    //button for signing into Meet Up and getting access token
@@ -31,8 +32,9 @@ $(document).ready(function () {
   });
 
   if(window.location.href.includes("access_token")){
+    tokenWebsite = window.location.href;
+      console.log("tokenWebsite conditional", tokenWebsite);
       meetUpRequest();      
-      tokenWebsite = window.location.href;
   }
 
   //   // ajax function call for landing page ... meet-ups
