@@ -2,6 +2,8 @@
 $(document).ready(function () {
   // Parallax functionality
   $('.parallax').parallax();
+  // carousel function
+  $('.carousel').carousel();
   // signout function
   $("#logOutBtn").on("click", function (event) {
     firebase.auth().signOut().then(function () {

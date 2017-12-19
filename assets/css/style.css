@@ -136,6 +136,7 @@ input {
     background-image: linear-gradient(to bottom, darkgrey, black);
 
 }
-/* #resource1{
-    display: inline-block;
-} */
+#video{
+    display: flex;
+    justify-content: center;
+}
