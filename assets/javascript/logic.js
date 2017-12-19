@@ -30,7 +30,7 @@ $(document).ready(function () {
 
   if(window.location.href.includes("access_token")){
     tokenWebsite = window.location.href;
-    
+      console.log("tokenWebsite conditional", tokenWebsite);
       meetUpRequest();      
   }
 
