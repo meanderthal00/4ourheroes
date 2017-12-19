@@ -26,9 +26,12 @@ $(document).ready(function () {
     window.location.replace("https://secure.meetup.com/oauth2/authorize?client_id=uslukvp5bbuco9nni5lgm900av&response_type=token&redirect_uri=https://meanderthal00.github.io/vetransConnect/landing.html");
     //variable for establishing the token key
 //pulled from the tokenWebsite var
+    var m = window.location.href;
+    if(m.includes("#access_token")){
+      meetUpRequest();      
+    }
   });
 
-  window.location.href.onchange(meetUpRequest());
   
 
   //   // ajax function call for landing page ... meet-ups
