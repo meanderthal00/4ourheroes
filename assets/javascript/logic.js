@@ -17,6 +17,7 @@ $(document).ready(function () {
   //declaring token website to cature url
   //for retrieving the Meet Up access token
   var tokenWebsite = "";
+  var token =[];
 
 
    //button for signing into Meet Up and getting access token
@@ -30,6 +31,7 @@ $(document).ready(function () {
 
   if(window.location.href.includes("access_token")){
       meetUpRequest();      
+      tokenWebsite = window.location.href;
   }
 
   //   // ajax function call for landing page ... meet-ups
