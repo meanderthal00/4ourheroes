@@ -2,7 +2,7 @@
 Team Project  due: 12-19
 
 3 beards and a Lady are:
-Alexa Rbinson,
+Alexa Robinson,
 Karl Leroy,
 Ryan Tucker,
 Ryan Compton
