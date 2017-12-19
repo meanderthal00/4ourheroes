@@ -33,19 +33,39 @@
             <a href="landing.html" class="brand-logo">
                 <img src="assets/images/logo.png" width="150" height="150" </a>
                 <ul id="nav-mobile" class="right hide-on-med-and-down">
+                    <!-- Dropdown Trigger  -->
                     <li>
-                        <a href="landing.html">Home</a>
+                        <a class="dropdown-button" data-activates="dropdown1">
+                            <i class="large material-icons right">map</i>
+                        </a>
                     </li>
+                    <!-- Dropdown Structure -->
+                    <ul id="dropdown1" class="dropdown-content" style="background-image: linear-gradient(black, darkgrey,black)"
+                        "color:white">
+                        <li>
+                            <a href="landing.html">Home</a>
+                        </li>
+                        <li>
+                            <a href="resource.html">Resources</a>
+                        </li>
+
+                    </ul>
+
+
                     <li>
-                        <a href="resource.html">Resources</a>
+                        <a class="waves-effect waves-light btn" id="signOutBtn">Sign out</a>
                     </li>
-                    <li>
-                        <a class="waves-effect waves-light btn">Sign out</a>
+                    <div class="row" id="info">
+                        <div style="font-size:18px;">
+                            <p id="userId">
+                                <em> name rank, branch</em>
+                            </p>
+                        </div>
+                    </div>
                     </li>
                 </ul>
         </div>
-
-
+    </nav>
 
 </header>
 
@@ -53,17 +73,7 @@
 
 
 <body id="profileBody">
-    <!-- <div class="parallax-container">
-                <div class="parallax"><img src="assets/images/parallax1.jpg" style="display:block; transform:translate3d(-50%, 716px, 0px);"></div>
-              </div>
-              <div class="section white" id="sectionWhite">
-                <div class="row container">
-                  <h2 class="header">Parallax</h2>
-                  <p class="grey-text text-darken-3 lighten-3">Parallax is an effect where the background content or image in this case, is moved at a different speed than the foreground content while scrolling.</p>
-                </div>
-              </div>
-              <div class="parallax-container">
-                <div class="parallax"><img src="assets/images/parallax2.jpg" style="display:block; transform: translate3d( -50%, 269px, 0px);" </div>  -->
+
     <div class="parallax-container">
         <div class="parallax">
             <img src="assets/images/files.jpg" height="1500px">
@@ -84,7 +94,8 @@
                     <div class="input-field col s5">
                         <input id="last_name" type="text" class="validate">
 
-                        <label class="active" for="last_name"> <i class=" small material-icons">account_box</i>Last Name</label>
+                        <label class="active" for="last_name">
+                            <i class=" small material-icons">account_box</i>Last Name</label>
                     </div>
 
                 </form>
@@ -94,13 +105,15 @@
                 <form class="col s10 offset-s2">
                     <div class="input-field col s5">
                         <input id="email" type="email" class="validate">
-                        <label class="active" for="email"> <i class=" small material-icons">email</i>Email</label>
-                        <!-- icon here -->
+                        <label class="active" for="email">
+                            <i class=" small material-icons">email</i>Email</label>
+
                     </div>
                     <div class="input-field col s5">
                         <input id="zip" type="text" class="validate">
-                        <label class="active" for="zip"> <i class=" small material-icons">location_on</i>Zip Code</label>
-                        <!-- icon goes here -->
+                        <label class="active" for="zip">
+                            <i class=" small material-icons">location_on</i>Zip Code</label>
+
                     </div>
 
                 </form>
@@ -110,13 +123,15 @@
                 <form class="col s10 offset-s2">
                     <div class="input-field col s5">
                         <input id="branch" type="text" class="validate">
-                        <label class="active" for="branch"> <i class=" small material-icons">group</i>Branch</label>
-                        <!-- icon here -->
+                        <label class="active" for="branch">
+                            <i class=" small material-icons">group</i>Branch</label>
+
                     </div>
                     <div class="input-field col s5">
                         <input id="rank" type="text" class="validate">
-                        <label class="active" for="rank"> <i class=" small material-icons">grade</i>Rank</label>
-                        <!-- icon here -->
+                        <label class="active" for="rank">
+                            <i class=" small material-icons">grade</i>Rank</label>
+
                     </div>
                 </form>
             </div>
@@ -126,7 +141,8 @@
                 <form class="col s10 offset-s2">
                     <div class="input-field col s10">
                         <input id="interests" type="text" class="validate">
-                        <label class="active" for="branch"><i class="small material-icons">comment</i>Hobbies/Intrests</label>
+                        <label class="active" for="branch">
+                            <i class="small material-icons">comment</i>Hobbies/Intrests</label>
                         <button class="btn btn-info" id="update-btn" type="submit">Update</button>
 
                     </div>
@@ -173,11 +189,3 @@
                     </div>
                 </div>
 </footer>
-
-
-
-<!-- TODO:
-icons added
-figure out the active color changes
-tinker the bkgrnd on the section
-adjust the top border on the section div  -->
