@@ -4,6 +4,7 @@ $(document).ready(function () {
   $('.parallax').parallax();
   // carousel function
   $('.carousel.carousel-slider').carousel({fullWidth: true});
+  
   // signout function
   $("#logOutBtn").on("click", function (event) {
     firebase.auth().signOut().then(function () {
