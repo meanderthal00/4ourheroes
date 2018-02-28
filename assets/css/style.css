@@ -128,3 +128,7 @@ input {
 .collection-item{
     color:white !important;
 }
+
+.parallax img {
+    display: flex;
+}
