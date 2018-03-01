@@ -129,6 +129,6 @@ input {
     color:white !important;
 }
 
-.parallax img {
-    display: flex;
-}
+.parallax-container {
+    display: block !important;
+} 
